@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import '../styles/pages/landing.css';
-import DiscordLogo from '../public/logos/discord-icon-svgrepo-com.svg'; // Replace with your actual SVG file path
-import EveryonesRadioLogo from '../public/logos/er_logo.webp';
-import GitHubLogo from '../public/logos/github.png';
+import DiscordLogo from '../public/logos/discord.webp'; // Replace with your actual SVG file path
+import EveryonesRadioLogo from '../public/logos/er.webp';
+import GitHubLogo from '../public/logos/github.webp';
 
 export default function Home() {
   return (
@@ -13,8 +13,8 @@ export default function Home() {
       </div>
       <div>
         <div className="text-center  bg-black text-white">
-        <h1 className="text-3xl leading-normal">Everyone's Radio</h1>
-        <h2 className="text-xl">An Open-Source Community for Music & Technology</h2>
+        <h1 className="text-2xl lg:text-3xl leading-normal">Everyone's Radio</h1>
+        <h2 className="text-lg lg:text-xl">An Open-Source Community for Music & Technology</h2>
         </div>
         <p className="text-base mt-4 text-white bg-black p-1">
           Everyone's Radio is an open-source community at the intersection of music and technology. Our primary mission revolves around reshaping music and artistic communities by fostering crucial connections among creatives, industry change-makers, and a diverse array of professionals through open-source technology projects. This inclusive circle encompasses software engineers, A&Rs, DJs, producers, musicians, and digital marketers.
@@ -27,12 +27,12 @@ export default function Home() {
       </div>
       </div>
       <footer className="mt-auto">
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center space-x-5">
           {/* Social links */}
-          <a href="https://discord.gg/8jyJBSDuBe" target='blank' className="text-gray-500 hover:text-gray-700">
+          <a href="https://discord.gg/8jyJBSDuBe" target='blank' className="text-gray-500 flex justify-center items-center hover:text-gray-700">
             <Image src={DiscordLogo} alt="Discord Logo" width={24} height={24} />
           </a>
-          <a href="https://github.com/everyonesradio" target='blank' className="text-gray-500 hover:text-gray-700">
+          <a href="https://github.com/everyonesradio" target='blank' className="text-gray-500 flex justify-center items-center hover:text-gray-700">
             <Image src={GitHubLogo} alt="GitHub Logo" width={24} height={24} />
           </a>
         </div>
