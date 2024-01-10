@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import '../styles/pages/landing.css';
 import DiscordLogo from '../public/logos/discord.webp'; // Replace with your actual SVG file path
 import EveryonesRadioLogo from '../public/logos/er.webp';
 import GitHubLogo from '../public/logos/github.webp';
