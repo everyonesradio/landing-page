@@ -4,13 +4,6 @@
     height: 100%;
   }
   
-  /* Style for the logo */
-  .logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-  }
+
   
   
