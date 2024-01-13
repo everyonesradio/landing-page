@@ -1,113 +1,41 @@
 import Image from 'next/image'
+import DiscordLogo from '../public/logos/discord.webp'; // Replace with your actual SVG file path
+import EveryonesRadioLogo from '../public/logos/er.webp';
+import GitHubLogo from '../public/logos/github.webp';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <main className="flex w-full min-h-screen flex-col items-center justify-evenly p-5 font-mono">
+    <div className="w-full items-center justify-center lg:flex flex-col lg:pw-24 mb-5">
+      <div className="logo mx-auto flex flex-row items-center justify-center">
+        <Image src={EveryonesRadioLogo} alt="Everyone's Radio Logo"  width={175} height={10}/>
+      </div>
+      <div>
+        <div className="text-center  bg-black text-white">
+        <h1 className="text-2xl lg:text-3xl leading-normal">Everyone's Radio</h1>
+        <h2 className="text-lg lg:text-xl">An Open-Source Community for Music & Technology</h2>
+        </div>
+        <p className="text-base mt-4 text-white bg-black p-1">
+          Everyone's Radio is an open-source community at the intersection of music and technology. Our primary mission revolves around reshaping music and artistic communities by fostering crucial connections among creatives, industry change-makers, and a diverse array of professionals through open-source technology projects. This inclusive circle encompasses software engineers, A&Rs, DJs, producers, musicians, and digital marketers.
+          <br/><br/>At the core of our ethos, we see technology as an opportunity for artists to share their journey beyond streaming services and social media. Our team is focused on building sustainable artist communities on and offline. As a forward-looking community, we provide an extensive array of solutions, ranging from strategic album marketing campaigns, radio programming, IRL parties and hangouts, and immersive web app experiences.
+          <br/><br/>What truly makes Everyone's Radio stand out is our unwavering commitment to innovation, seamless collaboration, and unparalleled transparency. In our network, it's not only about sharing what you know but building a framework around that knowledge for other people to benefit from.
+          <br/><br/>In a world where technology significantly influences the careers of artists all around the world, Everyone's Radio recognizes the significance of a global perspective. Our open-source community stretches across continents, encompassing talents from Lagos, Accra, London, New York, Washington D.C., and Montreal. This rich diversity forms the foundation of our mission, as we harness the collective brilliance and shared experiences of creatives and tech-natives from various corners of the globe.
+          <br/><br/>Our primary mission remains steadfast—reshaping the music environment by fostering crucial connections among artists, record labels, and a diverse array of professionals united by our passion for music and technology. want to give artists the opportunity to actually contribute to the development of communities and services that will have a direct impact on their creative journeys. We believe that the key to success for modern artists lies in building strong and sustainable connections with their fans within a more equitable system.
+          <br/><br/>In essence, Everyone's Radio serves as a tool to demystify the relationship between music and technology by providing artists and their teams with unparalleled creative control over their music and its consumption. We recognize that the tech industry can sometimes be "exclusive", with barriers of entry that are often too high and too white. Our initiative is to bridge this gap, ensuring that artists from diverse backgrounds have the means to leverage technology for their artistic pursuits. Through our open-source community, we are striving to level the playing field, making technology an empowering ally rather than a daunting adversary. By breaking down the walls that have limited access and amplifying global perspectives, we aim to create a space where innovation flourishes, collaboration is second nature, and the artist's journey is defined by their own vision, not by barriers.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+      </div>
+      </div>
+      <footer className="mt-auto">
+        <div className="flex justify-center space-x-5">
+          {/* Social links */}
+          <a href="https://discord.gg/8jyJBSDuBe" target='blank' className="text-gray-500 flex justify-center items-center hover:text-gray-700">
+            <Image src={DiscordLogo} alt="Discord Logo" width={24} height={24} />
+          </a>
+          <a href="https://github.com/everyonesradio" target='blank' className="text-gray-500 flex justify-center items-center hover:text-gray-700">
+            <Image src={GitHubLogo} alt="GitHub Logo" width={24} height={24} />
           </a>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </footer>
     </main>
   )
 }
