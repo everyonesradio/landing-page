@@ -1,9 +1,11 @@
+import React from 'react'
 import Image from 'next/image'
-import DiscordLogo from '../public/logos/discord.webp'; // Replace with your actual SVG file path
-import EveryonesRadioLogo from '../public/logos/er.webp';
-import GitHubLogo from '../public/logos/github.webp';
+import DiscordLogo from '../../public/logos/discord.webp' // Replace with your actual SVG file path
+import EveryonesRadioLogo from '../../public/logos/er.webp';
+import GitHubLogo from '../../public/logos/github.webp';
 
-export default function Home() {
+
+const Home = () => {
   return (
     <main className="flex w-full min-h-screen flex-col items-center justify-evenly p-5 font-mono">
     <div className="w-full items-center justify-center lg:flex flex-col lg:pw-24 mb-5">
@@ -38,4 +40,6 @@ export default function Home() {
       </footer>
     </main>
   )
-}
+};
+
+export default Home;
