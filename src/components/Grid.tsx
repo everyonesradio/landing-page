@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import { GridItemData } from "@/types/grid";
-import { useSpring, animated } from '@react-spring/web';
 const defaultImgPath = '/img/projects/default.webp';
 
 export const Grid: React.FC<{items: GridItemData[]}> = ({items}) => {
@@ -21,19 +20,6 @@ export const Grid: React.FC<{items: GridItemData[]}> = ({items}) => {
 };
 
 export const GridItem: React.FC<{ data: GridItemData, index: number }> = ({ data, index }) => {
-  const gridAreaStyles = index % 2 === 0 ? 'span 2 / span 1' : 'span 2 / span 2';
-
-  const [props] = useSpring(() => ({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: { tension: 300, friction: 10 },
-  }));
-
-  const animatedStyles = {
-    ...props,
-    gridArea: gridAreaStyles,
-  }
-
   return (
     <div className="bg-white shadow-lg rounded-lg p-4 m-2" >
       <div className="image-container">
