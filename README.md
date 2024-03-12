@@ -1,4 +1,4 @@
-# Everyone's Radio Landing Page
+# Everyone's Landing Page
 
 ## Getting Started
 

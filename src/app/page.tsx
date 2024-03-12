@@ -13,8 +13,8 @@ const Home = () => {
     <main className="flex flex-col items-center justify-evenly m-5 font-mono">
       <div className="w-full items-center justify-center lg:flex flex-col lg:pw-24 mb-5">
         <div className="text-left text-white">
-          <h1 className="text-8xl lg:text-16xl leading-normal font-bold text-gradient">EVERYONE&apos;S</h1>
-          <h1 className="text-8xl lg:text-16xl leading-normal font-bold text-gradient">RADIO</h1>
+          <h1 className="text-8xl lg:text-16xl leading-normal font-bold text-gradient">hi,</h1>
+          <h1 className="text-8xl lg:text-16xl leading-normal font-bold text-gradient">everyone</h1>
           <h2 className="text-lg lg:text-xl">An Open-Source Community for Music & Technology</h2>
         </div>
       </div>

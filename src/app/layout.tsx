@@ -11,7 +11,7 @@ const  Background = dynamic(() => import('@/components/Background'), {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Everyone's Radio",
+  title: "Everyone",
   description: "Open-Source Community for Music & Technology",
 };
 

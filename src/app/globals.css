@@ -208,14 +208,13 @@ a {
 }
 
  .icon-background {
-  display: inline-block;
+  display: flex;
   width: 42px; /* Adjust size as needed */
   height: 42px; /* Adjust size as needed */
   background-color: rgba(255, 255, 255, 0.375); /* bg-white/[0.375] */
   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1); /* shadow-[0_0.75rem_2rem_0_rgba(0,0,0,0.1)] */
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  display: flex;
   align-items: center;
   justify-content: center;
  }
@@ -223,4 +222,12 @@ a {
  .icon-background:hover {
   transform: scale(1.05);
   cursor: pointer;
+ }
+
+ .bubble-overlay {
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 8px;
  }
