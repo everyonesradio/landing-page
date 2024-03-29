@@ -9,36 +9,36 @@ const Navigation = () => {
   <>
     <nav>
       <ul className="flex flex-col">
-        <li className="relative my-4">
+        <li className="relative my-4" onClick={() => router.push('/')}>
           <div className="flex items-center group">
             <div className="icon-background">
-              <VscFolderOpened onClick={() => router.push('/')} size={20} />
+              <VscFolderOpened size={20} />
             </div>
-            <span className="ml-2 invisible group-hover:visible">./home</span>
+            <span className="ml-2 text-white bg-black p-2 invisible group-hover:visible">./home</span>
           </div>
         </li>
-        <li className="relative my-4 group">
+        <li className="relative my-4 group" onClick={() => router.push('/music-apis')}>
           <div className="flex items-center">
             <div className="icon-background">
-              <VscTools onClick={() => router.push('/music-apis')} size={20} />
+              <VscMusic size={20} />
             </div>
-            <span className="ml-2 invisible group-hover:visible">./music apis</span>
+            <span className="ml-2 text-white bg-black p-2 invisible group-hover:visible">./music apis</span>
           </div>
         </li>
-        <li className="relative my-4 group">
+        <li className="relative my-4 group" onClick={() => router.push('/projects')}>
           <div className="flex items-center">
             <div className="icon-background">
-              <VscMusic onClick={() => router.push('/playlists')} size={20} />
+              <VscTools size={20} />
             </div>
-            <span className="ml-2 invisible group-hover:visible">./playlists</span>
+            <span className="ml-2 text-white bg-black p-2 invisible group-hover:visible">./projects</span>
           </div>
         </li>
-        <li className="relative my-4 group">
+        <li className="relative my-4 group" onClick={() => router.push('/about')}>
           <div className="flex items-center">
             <div className="icon-background">
-              <VscInfo onClick={() => router.push('/about')} size={20} />
+              <VscInfo size={20} />
             </div>
-            <span className="ml-2 invisible group-hover:visible">./about</span>
+            <span className="ml-2 text-white bg-black p-2 invisible group-hover:visible">./about</span>
           </div>
         </li>
       </ul>
