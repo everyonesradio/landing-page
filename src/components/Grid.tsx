@@ -6,11 +6,11 @@ const defaultImgPath = '/img/projects/default.webp';
 
 export const Grid: React.FC<{items: GridItemData[]}> = ({items}) => {
   return(
-    <div className="grid grid-cols-4 gap-4 overflow-auto max-h-[80vh]">
+    <div className="grid grid-cols-4 gap-4 overflow-auto max-h-[80vh] flex flex-col items-stretch">
       {/* SPECIAL GRID ITEM */}
       <a href="mailto:everyonesradio@gmail.com" target="_blank" className="col-span-1">
-        <div className="bg-white shadow-lg rounded-lg p-4 m-2">
-          <p>Want to add your API to the index?</p>
+        <div className="bg-white shadow-lg rounded-lg p-4 m-2 flex-grow">
+          <h3 className="text-xl font-semibold py-20">Want to add your API to the index?</h3>
         </div>
       </a>
       {/* END SPECIAL GRID ITEM */}
@@ -23,7 +23,7 @@ export const GridItem: React.FC<{ data: GridItemData, index: number }> = ({ data
   return (
     <div className="bg-white shadow-lg rounded-lg p-4 m-2" >
       <div className="image-container">
-        <Image src={data.imageUrl ? data.imageUrl : defaultImgPath} alt={data.title + " Preview"} width={100} height={100} className="rounded-lg"/>
+        {/*<Image src={data.imageUrl ? data.imageUrl : defaultImgPath} alt={data.title + " Preview"} width={100} height={100} className="rounded-lg"/>*/}
       </div>
       <div className="mt-4">
         <div>
@@ -36,9 +36,7 @@ export const GridItem: React.FC<{ data: GridItemData, index: number }> = ({ data
               {data.description}
             </p>
             <div className="mt-4">
-              {data.liveUrl && <a target="_blank" href={data.liveUrl} className="text-blue-500 hover:text-blue-700">Live</a>}
-              {data.repoUrl && <a target="_blank" href={data.repoUrl} className="text-blue-500 hover:text-blue-700">Repo</a>}
-              {data.previewUrl && <a target="_blank" href={data.previewUrl} className="text-blue-500 hover:text-blue-700">Preview</a>}
+              {data.repoUrl && <a target="_blank" href={data.repoUrl} className="text-blue-500 hover:text-blue-700">Go to API</a>}
             </div>
           </div>
         </div>
