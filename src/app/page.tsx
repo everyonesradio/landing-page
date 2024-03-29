@@ -15,21 +15,21 @@ const Home = () => {
         <div className="text-left text-white">
           <h1 className="text-8xl lg:text-16xl leading-normal font-bold text-gradient">hi,</h1>
           <h1 className="text-8xl lg:text-16xl leading-normal font-bold text-gradient">everyone</h1>
-          <h2 className="text-lg lg:text-xl">An Open-Source Community for Music & Technology</h2>
+          <h2 className="text-lg font-semibold lg:text-xl">an open-source community for music & technology</h2>
         </div>
       </div>
       <button className="overlay__btn m-4" onClick={handleJoinWaitlist}>Join the waitlist</button>
-      <footer className="mt-auto">
+      <div className="mt-auto">
         <div className="flex justify-center space-x-5">
           {/* Social links */}
-          <a href="https://discord.gg/8jyJBSDuBe" target='blank' className="text-gray-500 flex justify-center items-center hover:text-gray-700">
+          <a href="https://discord.gg/eZZVYKKnPT" target='blank' className="text-gray-500 flex justify-center items-center hover:text-gray-700">
             <Image src={DiscordLogo} alt="Discord Logo" width={24} height={24} />
           </a>
-          <a href="https://github.com/everyonesradio" target='blank' className="text-gray-500 flex justify-center items-center hover:text-gray-700">
+          <a href="https://github.com/e-veryone" target='blank' className="text-gray-500 flex justify-center items-center hover:text-gray-700">
             <Image src={GitHubLogo} alt="GitHub Logo" width={24} height={24} />
           </a>
         </div>
-      </footer>
+      </div>
     </main>
   );
 };
