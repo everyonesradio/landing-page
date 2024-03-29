@@ -52,11 +52,11 @@ const FilterGrid: React.FC<FilterGridProps> = ({ items }) => {
 
   return (
     <div className="flex flex-col items-start justify-start m-auto mt-2.5 overflow-auto w-full p-4">
-      <div className="flex gap-2 mb-2 flex-wrap">
+      <div className="flex flex-wrap gap-2 mb-2">
         {filterWords.map((word) => (
           <button
             key={word}
-            className={`text-white font-bold text-sm m-0.5 px-1.7 py-0.2 rounded-lg whitespace-nowrap font-headers cursor-pointer transition-colors duration-300 bubble-overlay ${activeFilters.includes(word) ? 'bg-gray-700' : ''} hover:bg-gray-700`}
+            className={`text-black font-semibold text-sm m-0.5 px-1.7 py-0.2 rounded-lg whitespace-nowrap font-headers cursor-pointer transition-colors duration-300 bubble-overlay ${activeFilters.includes(word) ? 'bg-gray-700' : ''} hover:bg-gray-700`}
             onClick={() => handleFilterClick(word)}
           >
             {word}
