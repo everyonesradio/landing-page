@@ -225,7 +225,7 @@ a {
  }
 
  .bubble-overlay {
-  background: rgba(255, 255, 255, 0.375);
+  background: white;
   box-shadow: 0 0.75px 2px 0 rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
