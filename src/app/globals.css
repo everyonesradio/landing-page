@@ -30,7 +30,6 @@ html {
 }
 
 body {
-  max-width: 1920px;
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -58,10 +57,10 @@ strong {
 
 .overlay {
   width: 100%;
-  max-width: 1140px;
-  max-height: 640px;
-  padding: 8rem 6rem;
+  margin: 3rem 0;
+  padding: 4rem 6rem;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   background: rgba(255, 255, 255, 0.375);
   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
@@ -160,7 +159,7 @@ a {
 
 @media only screen and (max-width: 1140px) {
   .overlay {
-    padding: 8rem 4rem;
+    padding: 4rem 4rem;
   }
 }
 
@@ -225,7 +224,6 @@ a {
  }
 
  .bubble-overlay {
-  background: white;
   box-shadow: 0 0.75px 2px 0 rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
