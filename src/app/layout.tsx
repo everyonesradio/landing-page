@@ -21,17 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} flex flex-col items-start h-screen w-full`}>
+    <html lang="en" className="max-w-screen max-h-screen h-screen w-screen">
+      <body className={`${inter.className} flex flex-col justify-center items-center`}>
         {/* Layout UI */}
         <Background />
-        <div className="flex flex-grow">
-          <div className="my-10">
-            <Navigation />
-          </div>
-          <div className="flex-grow">
-            <main>{children}</main>
-          </div>
+        <div className="flex flex-grow w-full mx-0">
+          <Navigation />
+          <div className="w-full my-24 md:my-14 lg:mx-24 md: mx-14">{children}</div>
         </div> 
       </body>
     </html>

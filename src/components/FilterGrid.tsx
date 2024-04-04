@@ -37,26 +37,30 @@ const FilterGrid: React.FC<FilterGridProps> = ({ items }) => {
   const handleFilterClick = (word: string) => {
     setActiveFilters((prevFilters) => {
       if (prevFilters.includes(word)) {
+        console.log("removing filter")
         // Remove the filter if it's already active
         return prevFilters.filter((filter) => filter !== word);
       } else {
+        console.log("adding filter")
         // Add the filter if it's not active
         return [...prevFilters, word];
       }
     });
+    console.log(activeFilters)
   };
 
   const filteredItems = activeFilters.length
     ? items.filter((item) => activeFilters.some((filter) => item.tech.includes(filter)))
     : items;
 
+
   return (
-    <div className="flex flex-col items-start justify-start m-auto mt-2.5 overflow-auto w-full p-4">
+    <div className="flex flex-col items-start justify-start m-auto mt-2.5 overflow-auto w-full max-w-screen p-4">
       <div className="flex flex-wrap gap-2 mb-2">
         {filterWords.map((word) => (
           <button
             key={word}
-            className={`text-black font-semibold text-sm m-0.5 px-1.7 py-0.2 rounded-lg whitespace-nowrap font-headers cursor-pointer transition-colors duration-300 bubble-overlay ${activeFilters.includes(word) ? 'bg-gray-700' : ''} hover:bg-gray-700`}
+            className={`text-black font-semibold md:text-sm text-xs md:m-0.5m md:px-1.7 md:py-0.2 rounded-lg whitespace-nowrap font-headers cursor-pointer transition-colors duration-300 bubble-overlay hover:bg-gray-400 ${activeFilters.includes(word) ? 'bg-gray-400' : 'bg-white'}`}
             onClick={() => handleFilterClick(word)}
           >
             {word}
