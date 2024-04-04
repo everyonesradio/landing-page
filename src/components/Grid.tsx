@@ -6,7 +6,7 @@ const defaultImgPath = '/img/projects/default.webp';
 
 export const Grid: React.FC<{items: GridItemData[]}> = ({items}) => {
   return(
-    <div className="grid grid-cols-4 gap-4 overflow-auto max-h-[80vh] flex flex-col items-stretch">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 flex flex-col items-stretch">
       {/* SPECIAL GRID ITEM */}
       <a href="mailto:everyonesradio@gmail.com" target="_blank" className="col-span-1">
         <div className="bg-white shadow-lg rounded-lg p-4 m-2 flex-grow">
