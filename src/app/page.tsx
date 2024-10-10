@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import DiscordLogo from "../../public/logos/discord.webp";
 import GitHubLogo from "../../public/logos/github.webp";
-import Link from "next/link";
 
 const Home = () => {
   const handleJoinWaitlist = () => {
