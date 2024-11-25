@@ -28,7 +28,7 @@ const Navigation = () => {
                 <VscMusic size={20} />
               </div>
               <span className='ml-2 text-white bg-black p-2 md:group-hover:block text-sm hidden pointer-events-none'>
-                ./music apis
+                ./music-apis
               </span>
             </div>
           </li>
