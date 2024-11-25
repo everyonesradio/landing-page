@@ -6,7 +6,7 @@ import GitHubLogo from "../../public/logos/github.webp";
 
 const Home = () => {
   const handleJoinWaitlist = () => {
-    console.log("You're all signed up");
+    window.open("https://1c9jh8g7jq6.typeform.com/to/SawCuFuh", "_blank");
   };
 
   return (
