@@ -206,7 +206,7 @@ a {
   }
 }
 
- .icon-background {
+.icon-background {
   display: flex;
   width: 42px; /* Adjust size as needed */
   height: 42px; /* Adjust size as needed */
@@ -216,16 +216,16 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.125);
   align-items: center;
   justify-content: center;
- }
+}
 
- .icon-background:hover {
+.icon-background:hover {
   transform: scale(1.05);
   cursor: pointer;
- }
+}
 
- .bubble-overlay {
+.bubble-overlay {
   box-shadow: 0 0.75px 2px 0 rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 8px;
- }
+}
