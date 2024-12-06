@@ -25,13 +25,9 @@ export default function RootLayout({
       <body
         className={`${inter.className} flex flex-col justify-center items-center`}
       >
-        {/* Layout UI */}
-        <Background />
         <div className='flex flex-grow w-full mx-0'>
           <Navigation />
-          <div className='w-full my-24 md:my-14 lg:mx-24 md: mx-14'>
-            {children}
-          </div>
+          <div className='w-full'>{children}</div>
         </div>
       </body>
     </html>
