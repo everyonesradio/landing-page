@@ -27,6 +27,25 @@ const map = (
 // Create a new simplex noise instance
 const noise2D = new (createNoise2D as any)();
 
+const lerpColor = (start: number, end: number, t: number) => {
+  const startRGB = {
+    r: (start >> 16) & 255,
+    g: (start >> 8) & 255,
+    b: start & 255,
+  };
+  const endRGB = {
+    r: (end >> 16) & 255,
+    g: (end >> 8) & 255,
+    b: end & 255,
+  };
+
+  const r = Math.round(startRGB.r + (endRGB.r - startRGB.r) * t);
+  const g = Math.round(startRGB.g + (endRGB.g - startRGB.g) * t);
+  const b = Math.round(startRGB.b + (endRGB.b - startRGB.b) * t);
+
+  return (r << 16) + (g << 8) + b;
+};
+
 // ColorPalette class
 class ColorPalette {
   hue!: number;
@@ -212,22 +231,34 @@ const Background = () => {
         });
       }
 
-      document.addEventListener("click", () => {
+      setInterval(() => {
         colorPalette.setColors();
         colorPalette.setCustomProperties();
 
         orbs.forEach((orb) => {
-          orb.fill = parseInt(colorPalette.randomColor().replace("0x", ""), 16);
+          const startColor = orb.fill;
+          const endColor = parseInt(
+            colorPalette.randomColor().replace("0x", ""),
+            16
+          );
+
+          let progress = 0;
+          const animate = () => {
+            progress += 0.02; // Controls transition speed
+            if (progress <= 1) {
+              orb.fill = lerpColor(startColor, endColor, progress);
+              requestAnimationFrame(animate);
+            }
+          };
+          animate();
         });
-      });
+      }, 5000);
     };
 
     initPixi();
   }, []);
 
-  return (
-    <canvas className='orb-canvas fixed top-0 left-0 w-full h-full -z-10' />
-  );
+  return <canvas className='orb-canvas' />;
 };
 
 export default Background;

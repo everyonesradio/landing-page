@@ -7,7 +7,7 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className='absolute md:w-auto w-full top-0 left-0 my-5 md:justify-start md:mx-7'>
+      <nav className='absolute md:w-auto w-full top-0 left-0 my-5 md:justify-start md:mx-7 z-20'>
         <ul className='flex flex-row m-0 md:flex-col justify-around'>
           <li className='relative my-4 group' onClick={() => router.push("/")}>
             <div className='flex items-center'>
