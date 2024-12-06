@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/navigation";
 import "./globals.css";
 
-const Background = dynamic(() => import("@/components/Background"), {
+const Background = dynamic(() => import("@/components/background"), {
   ssr: false,
 });
 

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { projectsGridData } from "@/data/projects.data";
-import FilterGrid from "@/components/FilterGrid";
+import FilterGrid from "@/components/filter-grid";
 
 const MusicAPIs = () => {
   return (
