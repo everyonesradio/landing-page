@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { GridItemData } from "@/types/grid";
-import { Grid } from "@/components/Grid"; // Import your existing Grid and GridItem components
+import { Grid } from "@/components/grid"; // Import your existing Grid and GridItem components
 import { priorityTechList } from "@/data/projects.data";
 
 interface FilterGridProps {
