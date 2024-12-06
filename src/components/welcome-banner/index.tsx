@@ -1,9 +1,15 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-
-import Background from "@/components/background";
+import dynamic from 'next/dynamic'
 import DiscordLogo from "../../../public/logos/discord.webp";
 import GitHubLogo from "../../../public/logos/github.webp";
+
+
+const Background = dynamic(() => import('../background'), {
+  ssr: false
+})
 
 const WelcomeBanner = () => {
   const handleJoinWaitlist = () => {
