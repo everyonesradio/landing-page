@@ -11,6 +11,7 @@ const MusicAPIs = () => {
           <h1 className='text-2xl lg:text-3xl leading-normal font-bold text-gradient'>
             MUSIC API INDEX
           </h1>
+          {/* Write a description here */}
         </div>
         <FilterGrid items={projectsGridData} />
       </div>

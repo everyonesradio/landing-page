@@ -1,3 +1,4 @@
+// Move data to mongodb collection
 import { GridItemData } from "@/types/grid";
 
 export const priorityTechList = [
