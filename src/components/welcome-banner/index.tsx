@@ -2,14 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 import DiscordLogo from "../../../public/logos/discord.webp";
 import GitHubLogo from "../../../public/logos/github.webp";
 
-
-const Background = dynamic(() => import('../background'), {
-  ssr: false
-})
+const Background = dynamic(() => import("../background"), {
+  ssr: false,
+});
 
 const WelcomeBanner = () => {
   const handleJoinWaitlist = () => {
@@ -17,7 +16,7 @@ const WelcomeBanner = () => {
   };
 
   return (
-    <div className='w-full h-full p-16 relative rounded-2xl'>
+    <div className='flex flex-col items-center justify-center w-full h-[80vh] p-16 relative rounded-2xl'>
       <Background />
       <div className='flex flex-col items-center justify-center'>
         <div className='items-center justify-center lg:flex flex-col lg:pw-24 mb-5'>
