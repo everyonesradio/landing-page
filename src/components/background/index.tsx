@@ -64,9 +64,9 @@ class ColorPalette {
   }
 
   setColors() {
-    this.hue = ~~random(220, 360);
-    this.complimentaryHue1 = this.hue + 30;
-    this.complimentaryHue2 = this.hue + 60;
+    this.hue = 222;
+    this.complimentaryHue1 = 252;
+    this.complimentaryHue2 = 282;
     this.saturation = 95;
     this.lightness = 50;
 
@@ -231,28 +231,8 @@ const Background = () => {
         });
       }
 
-      setInterval(() => {
-        colorPalette.setColors();
-        colorPalette.setCustomProperties();
-
-        orbs.forEach((orb) => {
-          const startColor = orb.fill;
-          const endColor = parseInt(
-            colorPalette.randomColor().replace("0x", ""),
-            16
-          );
-
-          let progress = 0;
-          const animate = () => {
-            progress += 0.02; // Controls transition speed
-            if (progress <= 1) {
-              orb.fill = lerpColor(startColor, endColor, progress);
-              requestAnimationFrame(animate);
-            }
-          };
-          animate();
-        });
-      }, 5000);
+      colorPalette.setColors();
+      colorPalette.setCustomProperties();
     };
 
     initPixi();
